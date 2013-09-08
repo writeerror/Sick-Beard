@@ -86,7 +86,7 @@
                                 <span class="component-title jumbo">Configure Provider:</span>
                                 <span class="component-desc">
                                     #set $provider_config_list = []
-                                    #for $cur_provider in ("nzbs_r_us", "omgwtfnzbs", "tvtorrents", "torrentleech", "btn"):
+                                    #for $cur_provider in ("nzbs_r_us", "omgwtfnzbs", "tvtorrents", "torrentleech", "torrentbytes", "btn"):
                                         #set $cur_provider_obj = $sickbeard.providers.getProviderClass($cur_provider)
                                         #if $cur_provider_obj.providerType == $GenericProvider.NZB and not $sickbeard.USE_NZBS:
                                             #continue
@@ -180,7 +180,27 @@
                                 <input class="component-desc" type="text" name="torrentleech_key" value="$sickbeard.TORRENTLEECH_KEY" size="40" />
                             </label>
                         </div>
-                    </div><!-- /torrentleechDiv //-->
+                    </div><!-- /torrentbytesDiv //-->
+                         <div class="providerDiv" id="torrentbytesDiv">
+                        <div class="field-pair">
+                            <label class="clearfix">
+                                <span class="component-title">Torrentbytes RSS URL:</span>
+                                <input class="component-desc" type="text" name="torrentbytes_url" value="$sickbeard.TORRENTBYTES_URL" size="40" />
+                            </label>
+                        </div>
+                         <div class="field-pair">
+                            <label class="clearfix">
+                                <span class="component-title">Torrentbytes User ID:</span>
+                                <input class="component-desc" type="text" name="torrentbytes_uid" value="$sickbeard.TORRENTBYTES_UID" size="40" />
+                            </label>
+                        </div>
+                         <div class="field-pair">
+                            <label class="clearfix">
+                                <span class="component-title">Torrentbytes pass:</span>
+                                <input class="component-desc" type="text" name="torrentbytes_pass" value="$sickbeard.TORRENTBYTES_PASS" size="40" />
+                            </label>
+                        </div>
+                    </div><!-- /torrentbytesDiv //-->
 
                     <div class="providerDiv" id="btnDiv">
                         <div class="field-pair">
